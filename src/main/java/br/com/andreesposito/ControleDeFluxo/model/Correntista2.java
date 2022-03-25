@@ -1,33 +1,32 @@
-package br.com.andreesposito.ControleDeFluxo.model;
- 
+package br.com.sistemacontas.projeto.model;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Id; 
+import javax.persistence.Id;
 import javax.persistence.Table;
- 
+
 @Entity
-@Table(name = "correntista")
+@Table(name="correntistas")
 public class Correntista {
-
-	@Id 
-	
-	@Column(name = "ag")
+	@Id
+	@Column(name="ag")
 	private int ag;
-
-	@Column(name = "conta")
+	
+	@Column(name="conta")
 	private int conta;
 	
-	@Column(name = "nome", length = 50)
+	@Column(name="nome")
 	private String nome;
 	
-	@Column(name = "email", length = 80)
-	private String email;
 	
-	@Column(name = "telefone", length = 15)
+	@Column(name="email")
+	private String email;
+
+	@Column(name="telefone")
 	private String telefone;
 	
-	@Column(name = "saldo")
-	private double saldo;
+	@Column(name="saldo")
+	private float saldo;
 
 	public int getAg() {
 		return ag;
@@ -69,14 +68,12 @@ public class Correntista {
 		this.telefone = telefone;
 	}
 
-	public double getSaldo() {
+	public float getSaldo() {
 		return saldo;
 	}
 
-	public void setSaldo(double saldo) {
+	public void setSaldo(float saldo) {
 		this.saldo = saldo;
 	}
- 
 	
- 
 }
